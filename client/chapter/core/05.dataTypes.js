@@ -25,8 +25,8 @@ const single = 'hello';
 const backtick = `hello ${1+3}`;
 
 console.log(hi);
-console.log(typeof double); // string
 console.log(typeof hi); // object
+console.log(typeof double); // string
 
 // 4. 정수, 부동 소수점 숫자(길이 제약)
 const number = new Number(123123);
@@ -94,11 +94,11 @@ console.log(arr[3]);
 // class
 const f = new fishBreadFrame();
 
+// 일반
 function fishBreadFrame(재료) {
   return 재료 + ' 맛 붕어빵';
 }
 
-// 일반
 const 팥붕어빵 = fishBreadFrame('팥');
 const 슈크림붕어빵 = fishBreadFrame('슈크림');
 const 와사비붕어빵 = fishBreadFrame('와사비');
@@ -110,11 +110,11 @@ console.log(와사비붕어빵);
 
 
 /* -------------------------------------------------------------------------- */
-// [원리]
-// 진짜 객체 > f() > new String() > 객체 > 진짜 객체
+[원리]
+진짜 객체 > f() > new String() > 객체 > 진짜 객체
 
 /* ------------------- Template literals(Template strings) ------------------ */
-// [예시]
-// let name = 'tiger';
-// let age = 30;
-// console.log(`안녕, 내 이름은 ${name}이야. 내 나이는 ${age}이야.`)
+[예시]
+let name = 'tiger';
+let age = 30;
+console.log(`안녕, 내 이름은 ${name}이야. 내 나이는 ${age}이야.`)
