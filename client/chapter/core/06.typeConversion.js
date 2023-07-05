@@ -56,7 +56,8 @@ let width = '105.3px';
 console.log(width);
 console.log(Number(width));
 
-// 문자는 절삭시키고 숫자만 추출
+// 문자+숫자 조합
+// parseInt, parseFloat: 문자는 절삭시키고 숫자만 추출
 // 주의) 숫자+문자+숫자인 경우 parseInt, parseFloat는 문자 앞까지만 읽음
 let w = window.parseFloat(width, 10);
 let w1 = parseFloat(width, 10);
