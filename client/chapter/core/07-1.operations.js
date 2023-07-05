@@ -65,7 +65,7 @@ let secondArray=[4,5,6];
 const newArray=firstArray.concat(secondArray);
 console.log(newArray);
 
-// spread syntax(배열, 객체 / 진짜 많이 쓰임!! / 리액트에서는 필수라고 할 수 있음)
+// Spread syntax(Spread operator)(배열, 객체 / 진짜 많이 쓰임!! / 리액트에서는 필수라고 할 수 있음)
 console.log([...firstArray, ...secondArray]);
 
 /*
@@ -83,8 +83,10 @@ sum(1,2,3,4,5,6,7,8);
 // 선,후 증감 연산자
 // ++, --
 let counter = 0;
-counter++ // 0
+// 선증가
 ++counter // 1
+// 후증가
+counter++ // 0
 counter // 1
 
 
