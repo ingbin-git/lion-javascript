@@ -12,7 +12,7 @@
 - [x] 04.Global This [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/04.globalThis.js)
 - [x] 05.Data Types [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/05.dataTypes.js)
 - [x] 06.Type Conversion [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/06.typeConversion.js)
-- [x] 07.Operations [바로가기]()
+- [x] 07.Operations [바로가기](https://github.com/ingbin-git/lion-javascript/commit/3a3b5a2edc0ef7bbb463ea4bf33a8c6052548a22)
 - [ ] 08.Condition [바로가기]()
 - [ ] 09.Loop [바로가기]()
 - [ ] 10.Functions [바로가기]()
