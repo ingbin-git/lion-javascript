@@ -56,7 +56,7 @@ let l=frontEndDev.length - 1;
 while(l >= 0) {
   let value1=frontEndDev[l];
   console.log(value1);
-  --l;
+  l--;
 }
 
 let z4 = performance.now();
