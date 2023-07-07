@@ -57,11 +57,11 @@ function next(node) {
   return node;
 }
 
-// const second = next(first);
-// console.log(second);
+const second = next(first);
+console.log(second);
 
-// const div = next(heading);
-// console.log(div);
+const div = next(heading);
+console.log(div);
 
 function prev(node) {
   do {
