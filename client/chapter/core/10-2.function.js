@@ -43,7 +43,7 @@ let calculateTotal = function () {
   //   console.log(item);
   // })
 
-  // 4. slice를 빌려써서 배열로 만들기(인스턴스) : 배열 복사
+  // 4. slice를 빌려써서 배열로 만들기(instance) : 배열 복사
 
   // let realArray = Array.prototype.slice.call(arguments);
   // console.log(realArray);
@@ -52,7 +52,7 @@ let calculateTotal = function () {
   //   total += item;
   // });
 
-  // 5. Array.from() (스테틱) : 배열 복사
+  // 5. Array.from() (static) : 배열 복사
   // let realArray = Array.from(arguments);
   // console.log(realArray);
   // realArray.forEach(function (item) {
@@ -75,7 +75,7 @@ let calculateTotal = function () {
   // 누적값(acc), 순회를 도는 아이템(item), 최초값(initValue(여기서는 0))
   // reduce는 값이 나와야 함(return을 해야 함)
 
-  // total = realArray.reduce((acc,item)=> acc + item ,0);
+  // total = realArray.reduce((acc,item)=> acc + item, 0);
   return realArray.reduce((acc, item) => {
     return acc + item;
   }, 0);
