@@ -29,6 +29,11 @@ console.log(messenger === conversationTool);
 
 // 객체 복사
 // 1. for ~ in 문을 사용한 복사(얕은 복사)
+const cloneObject = {}
+
+for(const key in messenger){
+  cloneObject[key] = messenger[key];
+}
 
 // 2. Object.assign()을 사용한 복사(얕은 복사)
 const copyObject = Object.assign({}, messenger);
@@ -86,7 +91,7 @@ const containerStyles = {
   },
 };
 
-let copyedContainerStyles;
+let copyedContainerStyles = cloneDeep(containerStyles)
 
 // 1. 깊은 복사 유틸리티 함수
 function cloneDeep(object) {
