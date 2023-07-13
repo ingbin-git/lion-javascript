@@ -60,7 +60,7 @@ function counter() {
 let result = counter();
 result();
 
-// const a = (b) => (c) => (d) b+c+d;
+// const a = (b)=>(c)=>(d)=> b+c+d
 
 // 모든 함수에는 실행 컨텍스트가 있습니다. 실행 컨텍스트는 해당 함수 내의 변수와
 // 해당 부모 환경에 대한 참조를 의미하는 환경으로 구성됩니다. 상위 환경에 대한 참조는
