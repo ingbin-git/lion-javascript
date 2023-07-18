@@ -6,6 +6,7 @@
 
 ### Basic
 
+#### Core
 - [x] 01.Code Structure [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/01.codeStructure.js)
 - [x] 02.Variable [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/02.variables.js)
 - [x] 03.Strict Mode [바로가기](https://github.com/ingbin-git/lion-javascript/blob/01.core/client/chapter/core/03.strictMode.js)
@@ -39,13 +40,11 @@
 - [x] 17.Number [바로가기](https://github.com/ingbin-github/lion-javascript/blob/01.core/client/chapter/core/17.number.js)
 - [x] 18.String [바로가기](https://github.com/ingbin-github/lion-javascript/blob/01.core/client/chapter/core/18.string.js)
 - [x] 19.Array [바로가기](https://github.com/ingbin-github/lion-javascript/blob/01.core/client/chapter/core/19.array.js)
+- [x] 20.Array Methods [바로가기](https://github.com/ingbin-github/lion-javascript/blob/01.core/client/chapter/core/20.arrayMethods.js)
+- [x] 21.Try Catch [바로가기](https://github.com/ingbin-github/lion-javascript/blob/01.core/client/chapter/core/21.tryCatch.js)
 
 
-- [ ] 19.Array Methods [바로가기]()
-- [ ] 20.Iterable Object [바로가기]()
-- [ ] 21.Try Catch [바로가기]()
-- [ ] 22.Eval [바로가기]()
-- [ ] 23.Void [바로가기]()
+
 
 
 [def]: https://github.com/ingbin-git/lion-javascript/commit/3a3b5a2edc0ef7bbb463ea4bf33a8c6052548a22
