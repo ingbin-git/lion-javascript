@@ -1,5 +1,3 @@
-
-
 /* 
 body{
   height: 100vh;
@@ -9,87 +7,72 @@ body{
 }
  */
 
-
- h1{
+h1 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
- }
+  transform: translate(-50%, -50%);
+}
 
+.container {
+}
 
- .container {
+.container > div .container > div:nth-child(3) {
+}
 
- }
-
- .container > div
-
- .container > div:nth-child(3){}
-
-
-
-
-
- nav{
+nav {
   position: fixed;
   right: 1rem;
   top: 1rem;
- }
+}
 
-
-
-nav > ul{
+nav > ul {
   list-style: none;
-  display:flex;
+  display: flex;
   gap: 1rem;
 }
 
-
-
-
-nav > ul > li{
-
+nav > ul > li {
 }
 
-nav > ul > li > button.is-active{
+nav > ul > li > button.is-active {
   background-color: orange;
   transform: translateY(-5px);
 }
 
-nav > ul > li > button{
+nav > ul > li > button {
   padding: 0.5rem;
   cursor: pointer;
-  transition:all .5s;
+  transition: all 0.5s;
   border: none;
 }
 
-nav > ul > li:hover > button{
+nav > ul > li:hover > button {
   transform: translateY(-5px);
 }
 
-
-.first{
+.first {
   display: block;
 }
 
-.userCard{
+.userCard {
   max-width: 350px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   border: 1px solid black;
   padding: 1rem;
   position: relative;
-  gap:0.3rem;
+  gap: 0.3rem;
   margin-bottom: 1rem;
-  transition:all .3s;
+  transition: all 0.3s;
 }
 
-.userCard:hover{
-  transform:translate(-3px,-3px);
+.userCard:hover {
+  transform: translate(-3px, -3px);
   box-shadow: 2px 2px 2px 2px #00000066;
 }
 
-.imageField{
+.imageField {
   width: 4rem;
   height: 4rem;
   position: absolute;
