@@ -60,8 +60,6 @@ for (let value of first.attributes) {
 
 first.getAttribute('id'); // message
 
-/* ------------------------------ getAttr 유틸함수 ------------------------------ */
-
 const value = attr('.first', 'id'); // getter
 console.log(value);
 // attr('.first', 'class', 'second'); //setter

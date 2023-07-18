@@ -39,7 +39,7 @@
 const body = document.body;
 const h1 = getNode('h1');
 
-const template = /* html*/ `<div class="box">${10 + 30}</div>`;
+const template = /* html */ `<div class="box">${10 + 30}</div>`;
 
 // body.insertAdjacentHTML('beforeend', '<div class="box">상자</div>');
 h1.insertAdjacentHTML('beforebegin', template);
