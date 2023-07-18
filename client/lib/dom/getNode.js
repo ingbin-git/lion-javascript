@@ -1,3 +1,5 @@
+/* ------------------------------ getNode 유틸함수 ------------------------------ */
+
 function getNode(node) {
   if (typeof node !== 'string') {
     throw new Error('getNode 함수의 인수는 문자 타입이어야 합니다.');
@@ -5,6 +7,8 @@ function getNode(node) {
 
   return document.querySelector(node);
 }
+
+/* ------------------------------ getNodes 유틸함수 ----------------------------- */
 
 function getNodes(node) {
   if (typeof node !== 'string') {

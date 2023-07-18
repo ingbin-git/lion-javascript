@@ -2,7 +2,8 @@
 /*                                    class                                   */
 /* -------------------------------------------------------------------------- */
 
-// addClass
+/* ------------------------------ addClass 유틸함수 ----------------------------- */
+
 function addClass(node, className) {
   if (typeof node === 'string') {
     node = getNode(node);
@@ -17,7 +18,7 @@ function addClass(node, className) {
   node.classList.add(className);
 }
 
-// removeClass
+/* ---------------------------- removeClass 유틸함수 ---------------------------- */
 
 function removeClass(node, className) {
   if (typeof node === 'string') {
@@ -38,7 +39,8 @@ function removeClass(node, className) {
   node.classList.remove(className);
 }
 
-// toggleClass
+/* ---------------------------- toggleClass 유틸함수 ---------------------------- */
+
 const toggleClass = (node, className) => {
   if (typeof node === 'string') node = getNode(node);
   if (typeof className !== 'string') {
@@ -55,6 +57,8 @@ const toggleClass = (node, className) => {
 
 // 객체 속성에 접근할 때 .표기법은 사용할 수 없다.
 // computed property []
+
+/* ------------------------------- setCss 유틸함수 ------------------------------ */
 
 function setCss(node, prop, value) {
   if (typeof node === 'string') {
@@ -77,7 +81,8 @@ function setCss(node, prop, value) {
   return value;
 }
 
-// getCss
+/* ------------------------------- getCss 유틸함수 ------------------------------ */
+
 function getCss(node, prop) {
   if (typeof node === 'string') {
     node = getNode(node);
@@ -93,7 +98,8 @@ function getCss(node, prop) {
   return getComputedStyle(node).getPropertyValue(prop);
 }
 
-// css()
+/* -------------------------------- css 유틸함수 -------------------------------- */
+
 const css = (node, prop, value) => {
   return !value ? getCss(node, prop) : setCss(node, prop, value);
 };
