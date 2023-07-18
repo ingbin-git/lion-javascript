@@ -43,14 +43,60 @@ const arrowAttr = (node, prop, value) =>
   !value ? getAttr(node, prop) : setAttr(node, prop, value);
 
 function attr(node, prop, value) {
-  if (!value) {
-    return getAttr(node, prop); // getter
-  } else {
-    setAttr(node, prop, value); //setter
-  }
+  // if (!value) {
+  //   return getAttr(node, prop); // getter
+  // } else {
+  //   setAttr(node, prop, value); //setter
+  // }
+  return !value ? getAttr(node, prop) : setAttr(node, prop, value);
 }
 
 // IIFE
 // 캡슐화
-// 푸쉬 확인하기
-// const attr (function())
+/*
+const attr = (function () {
+  function getAttr(node, prop) {
+    const node = '.first';
+    const prop = 'id';
+    '.first'.getAttribute('id');
+
+    if (typeof node === 'string') {
+      node = getNode(node);
+    }
+    return node.getAttribute(prop);
+  }
+
+  function setAttr(node, prop, value) {
+    if (typeof node === 'string') {
+      node = getNode(node);
+    }
+    if (typeof prop !== 'string') {
+      throw new TypeError(
+        'setAttr 함수의 두 번째 인수는 문자 타입 이어야 합니다.'
+      );
+    }
+    if (!node[prop] && prop !== 'class' && prop !== 'title') {
+      node.dataset[prop] = value;
+      return;
+    }
+    node.setAttribute(prop, value);
+  }
+
+  const arrowAttr = (node, prop, value) =>
+    !value ? getAttr(node, prop) : setAttr(node, prop, value);
+
+  function attr(node, prop, value) {
+    if (!value) {
+      return getAttr(node, prop);
+    } else {
+      setAttr(node, prop, value);
+    }
+    return !value ? getAttr(node, prop) : setAttr(node, prop, value);
+  }
+  return attr;
+})();
+
+getAttr();
+
+attr();
+*/
