@@ -40,8 +40,6 @@ const cancelInterval = setInterval(() => {
 
 clearInterval(cancelInterval); // 중지
 
-// 범쌤코드 기입 부분
-
 // console.log(3);
 
 // const cancelInterval = setInterval(() => {
