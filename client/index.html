@@ -10,7 +10,8 @@
   <script src="./lib/dom/attr.js" defer></script>
   <script src="./lib/dom/insert.js" defer></script>
   <script src="./lib/dom/css.js" defer></script>
-  <script src="./chapter/dom/07.event.js" defer></script>
+  <script src="./lib/dom/bindEvent.js" defer></script>
+  <script src="./chapter/dom/09.dalegation.js" defer></script>
 
   <!-- <script src="./chapter/core/03.strictMode.js" type="module"></script> -->
 
@@ -19,15 +20,32 @@
 
 <body>
 
-  <h1>
-    <span class="first" id="message" data-size="10" data-tab-index="1">hello</span>
-    <span class="second">javascript</span>
-  </h1>
+  <!-- <div class="ground">
+    <img src="https://en.js.cx/clipart/ball.svg" alt="축구공" id="ball">
+  </div> -->
 
-  <ul class="todo">
+  <!-- <section>
+    section
+    <article>
+      article
+      <p>p</p>
+    </article>
+  </section> -->
 
+  <ul class="container">
+    <li class="home" data-name="home">
+      <span>🏠</span><button>Home</button>
+    </li>
+    <li class="about" data-name="about">
+      <span>👦</span><button>About</button>
+    </li>
+    <li class="project" data-name="project">
+      <span>⭐️</span><button>Project</button>
+    </li>
+    <li class="contact" data-name="contact">
+      <span>📞</span><button>Contact</button>
+    </li>
   </ul>
-
 </body>
 
 </html>
