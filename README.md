@@ -53,5 +53,7 @@
 - [x] 05.Minipulation [바로가기](https://github.com/ingbin-github/lion-javascript/blob/02.dom/client/chapter/dom/05.manipulation.js)
 - [x] 06.Style [바로가기](https://github.com/ingbin-github/lion-javascript/blob/02.dom/client/chapter/dom/06.style.js)
 - [x] 07.Event [바로가기](https://github.com/ingbin-github/lion-javascript/blob/02.dom/client/chapter/dom/07.event.js)
+- [x] 08.Bubble [바로가기](https://github.com/ingbin-github/lion-javascript/blob/02.dom/client/chapter/dom/08.bubble.js)
+- [x] 09.Dalegation [바로가기](https://github.com/ingbin-github/lion-javascript/blob/02.dom/client/chapter/dom/09.dalegation.js)
 
 [def]: https://github.com/ingbin-git/lion-javascript/commit/3a3b5a2edc0ef7bbb463ea4bf33a8c6052548a22
