@@ -1,7 +1,3 @@
-/* eslint no-unused-vars: 'off' */
+import { getNode } from './lib/index.js';
 
-console.log('hello js');
-
-const a = 10;
-
-const b = 10;
+// getNode()
