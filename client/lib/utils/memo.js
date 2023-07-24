@@ -1,4 +1,4 @@
-import { getNode } from '../dom/index.js';
+// import { getNode } from '../dom/index.js';
 
 const cache = {};
 
@@ -11,7 +11,7 @@ export const memo = (key, callback) => {
   }
   cache[key] = callback();
 
-  console.log(cache);
+  // console.log(cache);
 };
 
 /*
