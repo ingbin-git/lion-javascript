@@ -42,7 +42,6 @@ import {
 // 1. 아이템 지우기
 // 2. 메모하기
 
-
 /* --------------------------------- 이벤트 위임 --------------------------------- */
 /*
 const buttonGroup = getNode('.buttonGroup');
@@ -55,12 +54,18 @@ buttonGroup.addEventListener('click', handleRollingDice);
 */
 
 // 배열 구조 분해 할당
+
+// function sum(...args) {
+//   const [a, b, c] = args;
+// }
+
 const [startButton, recordButton, resetButton] = getNodes(
   '.buttonGroup > button'
 );
 const recordListWrapper = getNode('.recordListWrapper');
 
 const tbody = getNode('.recordList > tbody');
+memo('@tbody', () => getNode('.recordList > tbody'));
 
 const handleRollingDice = ((e) => {
   let isClicked = false;
@@ -114,7 +119,7 @@ function renderRecordItem() {
   // 큐브의 data-dice 값만 가져오기
   const diceValue = +attr('#cube', 'data-dice');
 
-  insertLast(tbody, createItem(diceValue));
+  insertLast(memo('@tbody'), createItem(diceValue));
 
   endScroll(recordListWrapper);
 }
