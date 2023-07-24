@@ -7,6 +7,8 @@ import {
   endScroll,
   clearContents,
   diceAnimation,
+  disableElement,
+  isDisableState,
 } from './lib/index.js';
 
 // [과제]
@@ -132,8 +134,11 @@ function handleRecord() {
 
 function handleReset() {
   recordListWrapper.hidden = true;
-  recordButton.disabled = true;
-  resetButton.disabled = true;
+  disableElement(recordButton, true);
+  disableElement(resetButton, true);
+  // recordButton.disabled = true;
+  // resetButton.disabled = true;
+  console.log(isDisableState(resetButton));
 
   clearContents(tbody);
   count = 0;
