@@ -31,6 +31,8 @@ import {
 
 /* -------------------------------- [phase-4] ------------------------------- */
 // 1. result 클릭 이벤트 바인딩
+// 2. result 클릭시 클립보드에 복사해주세요
+// 3. 재사용 가능한 함수로 만들어 주세요
 
 const submit = getNode('#submit');
 const nameField = getNode('#nameField');
