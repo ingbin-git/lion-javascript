@@ -1,10 +1,12 @@
 import {
-  diceAnimation,
+  memo,
   getNode,
   getNodes,
   attr,
   insertLast,
   endScroll,
+  clearContents,
+  diceAnimation,
 } from './lib/index.js';
 
 // [과제]
@@ -33,6 +35,12 @@ import {
 //    - 초기화 버튼 이벤트 바인딩
 //    - hidden 속성 true 만들기
 // 3. 주사위 값을 가져와서 랜더링
+// 4. 스크롤 위치 내리기
+// 5. 함수 분리
+
+// [phase-3] 초기화 시키기
+// 1. 아이템 지우기
+// 2. 메모하기
 
 /* --------------------------------- 이벤트 위임 --------------------------------- */
 /*
@@ -120,6 +128,10 @@ function handleReset() {
   recordListWrapper.hidden = true;
   recordButton.disabled = true;
   resetButton.disabled = true;
+
+  clearContents(tbody);
+  count = 0;
+  total = 0;
 }
 
 startButton.addEventListener('click', handleRollingDice);
