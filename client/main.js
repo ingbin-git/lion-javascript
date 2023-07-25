@@ -1,10 +1,10 @@
 import {
+  attr,
   memo,
   getNode,
   getNodes,
-  attr,
-  insertLast,
   endScroll,
+  insertLast,
   clearContents,
   diceAnimation,
   disableElement,
@@ -65,8 +65,7 @@ const [startButton, recordButton, resetButton] = getNodes(
 );
 const recordListWrapper = getNode('.recordListWrapper');
 
-const tbody = getNode('.recordList > tbody');
-memo('@tbody', () => getNode('.recordList > tbody'));
+memo('@tbody', () => getNode('.recordList > tbody')); // setter
 
 const handleRollingDice = ((e) => {
   let isClicked = false;
@@ -118,7 +117,7 @@ function createItem(value) {
 
 function renderRecordItem() {
   // 큐브의 data-dice 값만 가져오기
-  const diceValue = +attr('#cube', 'data-dice');
+  const diceValue = +attr(memo('cube'), 'data-dice');
 
   insertLast(memo('@tbody'), createItem(diceValue));
 
@@ -138,7 +137,7 @@ function handleReset() {
   // recordButton.disabled = true;
   // resetButton.disabled = true;
 
-  clearContents(tbody);
+  clearContents(memo('@tbody')); // getter
   count = 0;
   total = 0;
 }
