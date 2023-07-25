@@ -120,10 +120,10 @@ xhr.delete = (url, onSuccess, onFail) => {
 xhr.get(
   'https://jsonplaceholder.typicode.com/users',
   (result) => {
-    console.log(result);
+    // console.log(result);
   },
   (err) => {
-    console.log(err);
+    // console.log(err);
   }
 );
 
@@ -137,9 +137,9 @@ xhr.post(
   'https://jsonplaceholder.typicode.com/users',
   { name: 'tiger' },
   (result) => {
-    console.log(result);
+    // console.log(result);
   },
   (err) => {
-    console.log(err);
+    // console.log(err);
   }
 );
