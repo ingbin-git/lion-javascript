@@ -1,6 +1,8 @@
 /* ------------------------------ [readystate] ------------------------------ */
 // 현재 상태를 알려주는 것
 
+import { refError } from '../error/refError.js';
+
 // 0: uninitialized
 // 1: loading
 
@@ -11,7 +13,7 @@
 
 // jQuery: 비동기 통신이 쉬움
 
-/* -------------------------------- callback -------------------------------- */
+/* ------------------------------- 1. callback ------------------------------ */
 // 객체 구조 분해 할당
 
 export function xhr({
@@ -143,3 +145,79 @@ xhr.post(
     // console.log(err);
   }
 );
+
+/* ----------------------------- 2. promise API ----------------------------- */
+
+const defaultOptions = {
+  method: 'GET',
+  url: '',
+  body: null,
+  errorMessage: '서버와의 통신이 원활하지 않습니다.',
+  headers: {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+  },
+};
+
+export function xhrPromise(options) {
+  // mixin
+  // const config = { ...defaultOptions, ...options };
+
+  // {}을 넣지 않으면 원형이 회손되므로 꼭! {}을 넣어주어야 함
+  const { method, url, body, errorMessage, headers } = Object.assign(
+    {},
+    defaultOptions,
+    options
+  );
+
+  if (!url) refError('서버와 통신할 url은 필수값입니다.');
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open(method, url);
+
+  Object.entries(headers).forEach(([key, value]) => {
+    xhr.setRequestHeader(key, value);
+  });
+
+  xhr.send(JSON.stringify(body));
+
+  return new Promise((resolve, reject) => {
+    xhr.addEventListener('readystatechange', () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status >= 200 && xhr.status < 400) {
+          resolve(JSON.parse(xhr.response));
+        } else {
+          reject({ message: errorMessage });
+        }
+      }
+    });
+  });
+}
+
+xhrPromise.get = (url) => {
+  return xhrPromise({ url });
+};
+
+xhrPromise.post = (url, body) => {
+  xhrPromise({
+    url,
+    body,
+    method: 'POST',
+  });
+};
+
+xhrPromise.delete = (url) => {
+  xhrPromise({
+    url,
+    method: 'DELETE',
+  });
+};
+
+xhrPromise.put = (url, body) => {
+  return xhrPromise({
+    url,
+    body,
+    method: 'PUT',
+  });
+};

@@ -34,13 +34,56 @@ const second = getNode('.second');
 // });
 
 // delayP 함수를 실행하면 리턴되는 값이 promise 객체입니다.
-function delayP() {
+
+// 객체 합성 mixin
+
+const defaultOptions = {
+  shouldReject: false,
+  timeout: 1000,
+  data: '성공!',
+  errMessage: '알 수 없는 오류가 발생했습니다.',
+};
+
+function delayP(options) {
+  let config = { ...defaultOptions };
+  if (typeof options === 'number') {
+    config.timeout = options;
+  }
+
+  if (typeof options === 'object') {
+    config = { ...defaultOptions, ...options };
+  }
+
+  const { shouldReject, data, errMessage, timeout } = config;
+
   return new Promise((resolve, reject) => {
-    resolve('성공입니다!');
+    // 비동기 통신의 환경을 표현하기 위해 setTimeout을 차용
+    setTimeout(() => {
+      if (!shouldReject) {
+        resolve(data);
+      } else {
+        reject({ message: errMessage });
+      }
+    }, timeout);
   });
 }
 
-delayP().then((result) => {
-  console.log(result);
-});
-console.log(delayP());
+delayP({ shouldReject: false })
+  .then((res) => {
+    // console.log(res);
+  })
+  .catch(({ message }) => {
+    alert(message);
+  })
+  .finally(() => {
+    // console.log('어찌되었건 실행합니다.');
+  });
+
+// delayP()
+//   .then(({ name, age }) => {
+//     console.log(name);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
