@@ -1,7 +1,7 @@
+import { refError } from '../error/refError.js';
+
 /* ------------------------------ [readystate] ------------------------------ */
 // 현재 상태를 알려주는 것
-
-import { refError } from '../error/refError.js';
 
 // 0: uninitialized
 // 1: loading
@@ -11,7 +11,7 @@ import { refError } from '../error/refError.js';
 // 3: interacive
 // 4: complete
 
-// jQuery: 비동기 통신이 쉬움
+// jQuery: 비동기 통신이 쉬움(ajax)
 
 /* ------------------------------- 1. callback ------------------------------ */
 // 객체 구조 분해 할당
@@ -164,11 +164,7 @@ export function xhrPromise(options) {
   // const config = { ...defaultOptions, ...options };
 
   // {}을 넣지 않으면 원형이 회손되므로 꼭! {}을 넣어주어야 함
-  const { method, url, body, errorMessage, headers } = Object.assign(
-    {},
-    defaultOptions,
-    options
-  );
+  const { method, url, body, errorMessage, headers } = Object.assign( {}, defaultOptions, options );
 
   if (!url) refError('서버와 통신할 url은 필수값입니다.');
 
