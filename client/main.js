@@ -1,4 +1,4 @@
-import { xhrPromise } from './lib/index.js';
+import { tiger, xhrPromise } from './lib/index.js';
 
 // xhr.get('https://jsonplaceholder.typicode.com/users', (res) => {
 //   console.log(res);
@@ -7,4 +7,8 @@ import { xhrPromise } from './lib/index.js';
 //   });
 // });
 
-// conssole.log(xhrPromise);
+// console.log(xhrPromise);
+
+const data = await tiger.get('https://jsonplaceholder.typicode.com/users');
+
+console.log(data);
