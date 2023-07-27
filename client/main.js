@@ -11,6 +11,7 @@ import {
   renderUserCard,
   renderEmptyCard,
 } from './lib/index.js';
+
 // [1단계]
 // 1. tiger 함수를 사용해서 user를 가져와 주세요.
 // 2. 함수 안으로 넣기
