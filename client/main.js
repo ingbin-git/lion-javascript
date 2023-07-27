@@ -57,7 +57,7 @@ async function renderUserList() {
     // $('.loadingSpinner').remove();
 
     const response = await tiger.get('http://localhost:3000/users');
-    const userData = response.data; // 두번째 await을 하지 않기 위해 tiger에서 json을 해준거군
+    const userData = response.data; // 두번째 await을 하지 않기 위해 tiger 함수에서 json을 해준거군
 
     userData.forEach((item) => renderUserCard(userCardInner, item));
 
