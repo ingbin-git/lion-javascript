@@ -1,7 +1,19 @@
-/* eslint no-unused-vars: 'off' */
+import { getNode, getStorage, setStorage } from './lib/index.js';
 
-console.log('hello js');
+const textField = getNode('#textField');
 
-const a = 10;
+function handleTextField() {
+  const value = this.value;
 
-const b = 10;
+  setStorage('text', value);
+}
+
+function init() {
+  getStorage('text').then((res) => {
+    textField.value = res;
+  });
+}
+textField.addEventListener('input', handleTextField);
+window.addEventListener('DOMContentLoaded', init);
+
+// 클리어 버튼을 눌렀을 때 내용이 비워지는 것
